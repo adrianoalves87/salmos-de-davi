@@ -3,97 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>salmo</title>
-  
-<style>body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    background: url('./salmo.webp') no-repeat center center fixed; /* Caminho para sua imagem */
-    background-size: cover;
-}
+    <title>Salmo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background: url('./salmo.webp') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-.overlay {
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com opacidade */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
 
-header {
-    background-color: #333;
-    color: rgb(234, 238, 25);
-    text-align: center;
-    padding: 1rem 0;
-    position: relative;
-    z-index: 2;
-}
+        header {
+            background-color: #333;
+            color: rgb(234, 238, 25);
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            z-index: 2;
+        }
 
-main {
-    padding: 2rem;
-    position: relative;
-    z-index: 2;
-}
+        main {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
 
-.video-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
+        .video-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
-.video {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 320px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        .video {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.video h2 {
-    font-size: 1.25rem;
-    margin: 0.5rem 0;
-}
+        .video h2 {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+        }
 
-.like-button {
-    background-color: #4cafa7;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
+        .like-button {
+            background-color: #4cafa7;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-.like-button:hover {
-    background-color: #45a049;
-}
+        .like-button:hover {
+            background-color: #45a049;
+        }
 
-.back-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 1rem;
-}
+        .back-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 1rem;
+        }
 
-.back-button:hover {
-    background-color: #159932;
-}
-</style>
+        .back-button:hover {
+            background-color: #159932;
+        }
+
+        @media (max-width: 768px) {
+            .video {
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+
+            .video-gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                font-size: 1rem;
+                padding: 0.5rem 0;
+            }
+
+            .like-button, .back-button {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Salmo de davi narrado por cid moreira</h1>
+        <h1>Salmo de Davi narrado por Cid Moreira</h1>
     </header>
     <button class="back-button" onclick="goBack()">Voltar</button>
     <main>
@@ -103,7 +127,7 @@ main {
                     <source src="./Salmos 91 - Cid Moreira 01.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>salmo-91</h2>
+                <h2>Salmo 91</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
             <article class="video">
@@ -111,16 +135,15 @@ main {
                     <source src="./salmo66-2.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>salmo-66</h2>
+                <h2>Salmo 66</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
-            <!-- Mais vídeos podem ser adicionados aqui -->
             <article class="video">
                 <video width="320" height="240" controls>
                     <source src="./Salmos 23 - 03.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>salmo-23</h2>
+                <h2>Salmo 23</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
         </section>
@@ -130,7 +153,7 @@ main {
                     <source src="./Salmos 18 -.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>salmo-18</h2>
+                <h2>Salmo 18</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
             <article class="video">
@@ -138,16 +161,15 @@ main {
                     <source src="./salmo 29.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>salmo-29</h2>
+                <h2>Salmo 29</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
-            <!-- Mais vídeos podem ser adicionados aqui -->
             <article class="video">
                 <video width="320" height="240" controls>
                     <source src="./SALMO-140.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>SALMO-140</h2>
+                <h2>Salmo 140</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
         </section>
@@ -157,7 +179,7 @@ main {
                     <source src="./SALMO-41.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>SALMO-41</h2>
+                <h2>Salmo 41</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
             <article class="video">
@@ -165,16 +187,15 @@ main {
                     <source src="./Salmos -25.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2>Salmos -25 </h2>
+                <h2>Salmo 25</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
-            <!-- Mais vídeos podem ser adicionados aqui -->
             <article class="video">
                 <video width="320" height="240" controls>
                     <source src="./SALMO-04.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
-                <h2> salmo-04</h2>
+                <h2>Salmo 4</h2>
                 <button class="like-button" onclick="likeVideo(this)">Curtir <span class="like-count">0</span></button>
             </article>
         </section>
